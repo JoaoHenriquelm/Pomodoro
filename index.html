@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/pomodoroori.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/93ce9e9498.js" crossorigin="anonymous"></script>
+    <title>Pomodoro</title>
+  </head>
+  <body>
+
+    <header>
+      <span id="pomodoroTimer" class="timers" onclick="pomodoroPage()">Pomodoro</span>
+      <span id="shortBreakTimer" class="timers" onclick="shortBreakPage()">Intervalo curto</span>
+    </header>
+
+    <main>
+      <div id="circle"><span id="pomodoro-timer"></span></div>
+      <div id="pomodoro-start" onclick="play()" class="icon"><i class="fa-sharp fa-solid fa-play"></i></div>
+      <div id="pomodoro-pause" onclick="play()" class="icon"><i class="fa-sharp fa-solid fa-pause"></i></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
