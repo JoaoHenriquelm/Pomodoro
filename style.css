@@ -132,7 +132,32 @@ main {
 
 @media screen and (orientation: landscape) and (max-height: 540px) {
     main {
-        top: 62%;
+        top: 60%;
+    }
+
+    #circle {
+        width: 14rem;
+        height: 14rem;
+
+    }
+
+    #pomodoro-timer {
+        font-weight: 600;
+        font-size: 4rem;
+    }
+
+    .icon {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 450px) {
+    header {
+        top: 5%;
+    }
+
+    main {
+        top: 60%;
     }
 
     #circle {
