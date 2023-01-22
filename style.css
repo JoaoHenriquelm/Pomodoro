@@ -13,10 +13,11 @@
 body {
     position: relative;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
-    background: linear-gradient(to top, #61013e 0%, #6713d2 100%);
     width: 100vw;
     height: 100vh;
-    background-image: url(images/5556661.jpg);
+    background: url(images/5556661.jpg);
+    background-repeat: no-repeat;
+    
     background-position: bottom right;
 }
 
@@ -108,17 +109,45 @@ main {
         margin-top: -20px;
         font-size: 0px;
     }
+
 }
 
 
 @media screen and (max-width: 760px) {
     header {
         top: 0.5rem;
-
         width: auto;
     }
 
     #circle {
         margin-top: 5rem;
     }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1020px) {
+
+    main {
+        top: 60%;
+    }
+
+    body {
+        background: #3F0C73;
+    }
+
+    #circle {
+        width: 14rem;
+        height: 14rem;
+
+    }
+
+    #pomodoro-timer {
+        font-weight: 600;
+        font-size: 4rem;
+    }
+
+    .icon {
+        font-size: 3.5rem;
+    }
+
+
 }
