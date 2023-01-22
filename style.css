@@ -11,12 +11,12 @@
 
 
 body {
+    position: relative;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
     width: 100vw;
     height: 100vh;
     background: url(images/5556661.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: bottom right;
 }
 
@@ -123,12 +123,17 @@ main {
     }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1020px) {
+@media screen and (orientation: landscape) and (max-height: 800px) {
 
     main {
         top: 60%;
     }
+}
 
+@media screen and (orientation: landscape) and (max-height: 540px) {
+    main {
+        top: 62%;
+    }
 
     #circle {
         width: 14rem;
@@ -144,6 +149,7 @@ main {
     .icon {
         font-size: 3.5rem;
     }
-
-
 }
+
+
+
