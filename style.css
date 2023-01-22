@@ -7,21 +7,19 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
-html {
+html, body {
     background: url(images/5556661.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom right;
-}
-
-body {
-    position: relative;
-    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     width: 100vw;
     height: 100vh;
 }
+
+
 
 header {
     position: relative;
