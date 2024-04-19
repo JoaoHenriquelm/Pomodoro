@@ -14,7 +14,7 @@ let contador = 1;
 
 
 function shortBreakPage() {
-  clearInterval(pausa)
+  clearInterval(pausa);
   pomodoroStart.style.display = "block";
   pomodoroPause.style.display = "none";
   pomodoroTimerTitle.classList.remove("ativo");
@@ -26,7 +26,7 @@ function shortBreakPage() {
 }
 
 function pomodoroPage() {
-  clearInterval(pausa)
+  clearInterval(pausa);
   pomodoroStart.style.display = "block";
   pomodoroPause.style.display = "none";
   shortBreakTimerTitle.classList.remove("ativo");
@@ -38,25 +38,25 @@ function pomodoroPage() {
 }
 
 function startPomodoro() {
-    if (pomodoroTimerTitle.classList.contains("ativo")) {
-      timer(25);
-    }
-  
-    if (shortBreakTimerTitle.classList.contains("ativo")) {
-      timer(5);
-    }
+  if (pomodoroTimerTitle.classList.contains("ativo")) {
+    timer(25);
+  }
+
+  if (shortBreakTimerTitle.classList.contains("ativo")) {
+    timer(5);
+  }
 }
 
 function play() {
   if (pomodoroStart.style.display !== "block") {
     pomodoroPause.style.display = "none";
     pomodoroStart.style.display = "block";
-    clearInterval(pausa)
+    clearInterval(pausa);
   } else if (pomodoroStart.style.display == "block") {
     pomodoroStart.style.display = "none";
     pomodoroPause.style.display = "block";
     startPomodoro();
-  } 
+  }
 }
 
 function timer(tempo) {
@@ -73,8 +73,13 @@ function timer(tempo) {
       clearInterval(pausa);
       pomodoroPause.style.display = "none";
       pomodoroStart.style.display = "block";
-      pomodoroTimerTitle.classList.remove("ativo");
-      shortBreakTimerTitle.classList.add("ativo");
+      if (pomodoroTimerTitle.classList.contains("ativo")) {
+        pomodoroTimerTitle.classList.remove("ativo");
+        shortBreakTimerTitle.classList.add("ativo");
+      } else {
+        shortBreakTimerTitle.classList.remove("ativo");
+        pomodoroTimerTitle.classList.add("ativo");
+      }
     } else if (
       segundos > 0 &&
       minutos > -1 &&
@@ -93,5 +98,5 @@ function timer(tempo) {
 
     pomodoroTimer.innerText = timer;
     document.title = `${timer} - Tempo restante`;
-  }, 1000)
+  }, 1000);
 }
